@@ -2,8 +2,8 @@
     <el-main>
         <el-card class="box-card">
             <div slot="header" class="clearfix">
-                <span v-if="!form.id">Cadastro de Funcionários</span>
-                <span v-else>Editar Funcionário</span>
+                <span v-if="!form.id">Cadastro de Empregados</span>
+                <span v-else>Editar Empregado</span>
             </div>
             <el-form ref="form" :model="form" width="100%">
                 <el-form-item>

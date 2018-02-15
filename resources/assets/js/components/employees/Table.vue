@@ -14,9 +14,10 @@
         <el-table-column prop="dependents" label="Dependentes" align="right"></el-table-column>
         <el-table-column prop="hired_at" label="Data Contratação" :formatter="dateFormatter" align="center" width="150px"></el-table-column>
         <el-table-column prop="fired_at" label="Data Demissão" :formatter="dateFormatter" align="center"></el-table-column>
-        <el-table-column fixed="right" width="120">
+        <el-table-column fixed="right" width="160">
           <template slot-scope="scope">
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="$router.push(`/employees/edit/${scope.row.id}`)"></el-button>
+            <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteEmployee(scope.row.id)"></el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -41,6 +42,18 @@ export default {
     },
     genderFormatter(row, column, cellValue) {
       return ["Masculino", "Feminino", "Outro"]["MFO".indexOf(cellValue)];
+    },
+    deleteEmployee(id) {
+      console.log("shazam");
+      service.delete(id).then(response => {
+        this.$message({
+              type: 'success',
+              message: 'Funcionário removido com Sucesso'
+          });
+      });
+      service.get().then(response => {
+        this.list = response.data;
+      });
     }
   },
   mounted() {

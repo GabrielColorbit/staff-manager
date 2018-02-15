@@ -1,77 +1,40 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">Register</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+<el-main>
+    <el-row :gutter="20">
+        <el-col :span="8" :offset="8">
+            <el-card class="box-card">
+                <div slot="header" class="clearfix">
+                    <span>Login</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                <el-form ref="form" :model="form" @submit="onSubmit" action="{{ route('register') }}" method="POST">
+                    @csrf
+                    <el-form-item label="Name" :error="$v.form.name.$error ? 'Name inválido' : '{{ $errors->first('name') }}'">
+                        <el-input name="name" v-model="form.name" prefix-icon="el-icon-user" clearable @blur="$v.form.name.$touch"/>
+                    </el-form-item>
+
+                    <el-form-item label="Email" :error="$v.form.email.$error ? 'Email inválido' : '{{ $errors->first('email') }}'">
+                        <el-input name="email" v-model="form.email" prefix-icon="el-icon-user" clearable @blur="$v.form.email.$touch"/>
+                    </el-form-item>
+                    <el-form-item label="Senha" :error="$v.form.password.$error ? 'Senha inválida' : '{{ $errors->first('password') }}'">
+                        <el-input name="password" v-model="form.password" prefix-icon="el-icon-password" clearable type="password"  @blur="$v.form.password.$touch"/>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" @click="onSubmit" native-type="submit" round>Registrar</el-button>
+                    </el-form-item>
+                </el-form>
+            </el-card>
+        <el-col>
+    </el-row>   
+</el-main>
+
+@endsection
+
+@section('script')
+    <script src="{{ mix('js/register.js') }}"></script>
+@endsection
+
+@section('style')
+    <link href="{{ mix('css/register.css') }}" rel="stylesheet">
 @endsection

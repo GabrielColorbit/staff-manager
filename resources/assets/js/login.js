@@ -4,7 +4,6 @@ import { mapActions, mapGetters } from "vuex";
 import App from "./app";
 import store from "./store";
 
-
 const app = new App({
   store,
   el: "#app",
