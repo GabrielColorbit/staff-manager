@@ -21,12 +21,12 @@ Também deve ser possível
     - npm https://www.npmjs.com/get-npm
     - mysql https://dev.mysql.com/downloads/installer/
         - create: scheme: staffmanater, user: staffmanager, password: staffmanager
-    - Comandos para Instalação
-    ####Inline code
-        `$ composer install`
-        `$ npm install`
+  - Comandos para Instalação
+  ####Inline code
+      `$ composer install`
+      `$ npm install`
 
-    - Comandos para Executar Projeto (executar em abas separadas do terminal)
-    ####Inline code
-        `$php artisan serve`
-        `$npm run watch`
+  - Comandos para Executar Projeto (executar em abas separadas do terminal)
+  ####Inline code
+      `$php artisan serve`
+      `$npm run watch`
