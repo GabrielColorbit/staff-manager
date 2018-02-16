@@ -1,5 +1,5 @@
 # Staff Manager
-Sistema de cadastro de funcionários, criado para pesquisa das tecnologias utilizadas.
+Sistema de cadastro de funcionários, criado com objetivo de realizar a integração entre o back-end feito com laravel e o front-end criado com vue.js.
 
 # Tecnologias Utilizadas
   - Laravel
@@ -12,6 +12,18 @@ Sistema de cadastro de funcionários, criado para pesquisa das tecnologias utili
 Também deve ser possível 
 # Requisitos
  Deverá ser possivel adicionar/remover/atualizar funcionários.
+ ###Tables
+                    
+Requisito  | Tipo | Prioridade | Perfil
+------------- | ------------- | ------------- | -------------
+Utilizar VueJS | Não Funcional | 3 | Todos
+Utilizar PHP | Não Funcional  | 3 | Todos
+Utilizar Mysql | Não Funcional  | 3 | Todos
+Autenticação de Sessão | Não Funcional  | 2 | Todos
+Cadastrar Funcionários | Funcional  | 1 | Usuário
+Editar Funcionários | Funcional  | 1 | Usuário
+Excluir Funcionários | Funcional  | 1 | Usuário
+Listagem de Funcionários | Funcional  | 1 | Usuário
 
 # Dependências
 
@@ -21,12 +33,12 @@ Também deve ser possível
     - npm https://www.npmjs.com/get-npm
     - mysql https://dev.mysql.com/downloads/installer/
         - create: scheme: staffmanater, user: staffmanager, password: staffmanager
-  - Comandos para Instalação
-  ####Inline code
-      `$ composer install`
-      `$ npm install`
 
-  - Comandos para Executar Projeto (executar em abas separadas do terminal)
-  ####Inline code
-      `$php artisan serve`
-      `$npm run watch`
+# Inicialização
+- Comandos para Instalação<br>
+    `$ composer install`<br>
+    `$ npm install`
+
+- Comandos para Executar Projeto (executar em abas separadas do terminal)<br>
+    `$php artisan serve`<br>
+    `$npm run watch`
