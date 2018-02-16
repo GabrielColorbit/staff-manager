@@ -1,18 +1,32 @@
-# StaffManager
+# Staff Manager
+Sistema de cadastro de funcionários, criado para pesquisa das tecnologias utilizadas.
 
-# dependences
+# Tecnologias Utilizadas
+  - Laravel
+  - VUE JS
+  - NPM
+  - Composer
+  - PHP
+  - Mysql
 
-# php http://php.net/downloads.php
-# composer https://getcomposer.org/
-# npm https://www.npmjs.com/get-npm
-# mysql https://dev.mysql.com/downloads/installer/
-#   create: scheme: staffmanater, user: staffmanager, password: staffmanager
+Também deve ser possível 
+# Requisitos
+ Deverá ser possivel adicionar/remover/atualizar funcionários.
 
+# Dependências
 
-# get dependences
-# composer install
-# npm install
+    Programas
+    - php http://php.net/downloads.php
+    - composer https://getcomposer.org/
+    - npm https://www.npmjs.com/get-npm
+    - mysql https://dev.mysql.com/downloads/installer/
+        - create: scheme: staffmanater, user: staffmanager, password: staffmanager
+    - Comandos para Instalação
+    ####Inline code
+        `$ composer install`
+        `$ npm install`
 
-# run project
-# php artisan serve
-# npm run watch
+    - Comandos para Executar Projeto (executar em abas separadas do terminal)
+    ####Inline code
+        `$php artisan serve`
+        `$npm run watch`
