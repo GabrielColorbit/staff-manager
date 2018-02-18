@@ -19,7 +19,7 @@ Requisito  | Tipo | Prioridade | Perfil
 Utilizar VueJS | Não Funcional | 3 | Todos
 Utilizar PHP | Não Funcional  | 3 | Todos
 Utilizar Mysql | Não Funcional  | 3 | Todos
-Autenticação de Sessão | Não Funcional  | 2 | Todos
+Autenticação de Sessão | Funcional  | 2 | Todos
 Cadastrar Funcionários | Funcional  | 1 | Usuário
 Editar Funcionários | Funcional  | 1 | Usuário
 Excluir Funcionários | Funcional  | 1 | Usuário
