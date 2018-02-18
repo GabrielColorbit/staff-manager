@@ -12,8 +12,7 @@ Sistema de cadastro de funcionários, criado com objetivo de realizar a integra�
 Também deve ser possível 
 # Requisitos
  Deverá ser possivel adicionar/remover/atualizar funcionários.
- ###Tables
-                    
+
 Requisito  | Tipo | Prioridade | Perfil
 ------------- | ------------- | ------------- | -------------
 Utilizar VueJS | Não Funcional | 3 | Todos
@@ -38,8 +37,8 @@ Listagem de Funcionários | Funcional  | 1 | Usuário
 - Comandos para Instalação<br>
     `$ composer install`<br>
     `$ npm install`<br>
-    `$php artisan migrate`<br>
+    `$ php artisan migrate`<br>
 
 - Comandos para Executar Projeto (executar em abas separadas do terminal)<br>
-    `$php artisan serve`<br>
-    `$npm run watch`<br>
+    `$ php artisan serve`<br>
+    `$ npm run watch`<br>
