@@ -8,8 +8,8 @@ Sistema de cadastro de funcionários, criado com objetivo de realizar a integra�
   - Composer
   - PHP
   - Mysql
+  - Element IO
 
-Também deve ser possível 
 # Requisitos
  Deverá ser possivel adicionar/remover/atualizar funcionários.
 
