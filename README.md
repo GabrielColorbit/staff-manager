@@ -37,9 +37,9 @@ Listagem de Funcionários | Funcional  | 1 | Usuário
 # Inicialização
 - Comandos para Instalação<br>
     `$ composer install`<br>
-    `$ npm install`
-    `$php artisan migrate`
+    `$ npm install`<br>
+    `$php artisan migrate`<br>
 
 - Comandos para Executar Projeto (executar em abas separadas do terminal)<br>
     `$php artisan serve`<br>
-    `$npm run watch`
+    `$npm run watch`<br>
