@@ -50,15 +50,27 @@
             @yield('content')
         </el-container>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCDGprftmL87bQP5w_7Gg68aRg8jwtXQdg",
+        authDomain: "staff-manager-c66b0.firebaseapp.com",
+        databaseURL: "https://staff-manager-c66b0.firebaseio.com",
+        projectId: "staff-manager-c66b0",
+        storageBucket: "",
+        messagingSenderId: "900798625646"
+    };
+    firebase.initializeApp(config);
+    </script>
     <!-- Scripts -->
     @if(config('app.env') == 'local')
         <script src="http://127.0.0.1:35729/livereload.js"></script>
     @endif
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
-    <!-- <script src="http://br836.teste.website/~color914/colorbit.com.br/staff-manager/public/js/manifest.js"></script>
-    <script src="http://br836.teste.website/~color914/colorbit.com.br/staff-manager/public/js/vendor.js"></script> -->
     @yield('script')
-
+    
 </body>
 </html>
